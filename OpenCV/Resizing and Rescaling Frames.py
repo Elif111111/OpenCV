@@ -1,0 +1,36 @@
+Python 3.12.0 (v3.12.0:0fb18b02c8, Oct  2 2023, 09:45:56) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> #cv.rectangle fonksiyonu, OpenCV kütüphanesinde dikdörtgen çizmek için kullanılan bir fonksiyondur.
+>>> #img: Dikdörtgenin çizileceği görüntü.
+... #pt1: Dikdörtgenin sol üst köşesinin koordinatları (x1, y1).
+... #pt2: Dikdörtgenin sağ alt köşesinin koordinatları (x2, y2).
+... #color: Dikdörtgenin rengi. (BGR formatında bir tuple)
+... #thickness: Çizginin kalınlığı (piksel cinsinden).
+... #lineType: Çizgi tipi, genellikle cv2.LINE_AA olarak kullanılır.
+>>> #cv.imshow fonksiyonu, OpenCV kütüphanesinde görüntüleri ekranda görüntülemek için kullanılan bir fonksiyondur.
+>>> #winname: Görüntünün görüntüleneceği pencerenin adı.
+... #mat: Görüntü verisi (NumPy dizisi)
+>>> #cv.waitKey fonksiyonu, OpenCV kütüphanesinde bir klavye olayını beklemek için kullanılır. Bu fonksiyon, bir tuşa basılana kadar veya belirli bir süre boyunca programın beklemesini sağlar. Özellikle görüntü işleme uygulamalarında kullanılır
+>>> import cv2 as cv
+... 
+... import numpy as np
+... 
+... 
+... blank = np.zeros((500,500,3), dtype=‘uint8’)
+... 
+... cv.imshow('Blank', blank)
+... 
+... 
+... #1. Paint the image a certain colo rectangle(img, pt1, pt2, color[, thickness
+... 
+... blank[200:300, 300:400] = 0,0,255
+... cv.imshow('Green', blank)
+... 
+... 
+... 
+... #2. Draw a Rectangle
+... 
+... cv.rectangle(blank, (0,0), (250,250),(0,255,0),thickness=2)
+... cv.imshow(‘Rectangle’,blank
+
+cv.waitKey(0)
